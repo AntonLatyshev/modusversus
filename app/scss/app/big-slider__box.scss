@@ -1,0 +1,20 @@
+.big-slider__box {
+  max-width: 1170px;
+  margin: 0 auto;
+  .slick-list {
+    padding: 68px 0 !important;
+  }
+  .slick-center {
+    transform: scale(1.46153);
+    position: relative;
+    z-index: 1;
+    .big-slider__link {
+      filter: grayscale(100);
+    }
+  }
+  .slick-current.slick-active {
+    .big-slider__link {
+      filter: grayscale(100);
+    }
+  }
+}

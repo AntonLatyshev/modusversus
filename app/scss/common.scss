@@ -1,0 +1,35 @@
+body {
+  height: 100%;
+  font-family: sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+}
+* {
+  &::after,
+  &::before {
+    box-sizing: border-box;
+  }
+  box-sizing: border-box;
+}
+// .lead {
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+//   &__title {
+//     font-weight: 400;
+//   }
+//   &__logo {
+//     display: inline-block;
+//     @extend %icon-logo;
+//   }
+// }
+.wrapper {
+  max-width: 1500px;
+  width: 100%;
+  margin: 0 auto;
+}
+.main {
+  background-color: #f3f3f3;
+  padding: 0 0 50px;
+}

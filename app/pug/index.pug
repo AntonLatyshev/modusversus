@@ -1,0 +1,176 @@
+extends ./layouts/_layout.pug
+block content
+  .main
+    .main-carousel
+      - var i = 0
+      while ( i < 3 )
+        .main-carousel__slide
+          img(class="main-carousel__img" src='data/main-carousel/slide-1.jpg')
+          .main-carousel__block
+            .main-carousel__title Vestibulum
+            .main-carousel__text
+              p Maecenas tincidunt, augue et rutrum condimentum, libero lectus mattis orci, ut commodo.
+          - i++
+    .services
+      .services__holder
+        .services__block
+          .services__title Some of our top services
+          .services__text
+            p Ut eleifend libero sed neque rhoncus consequat. Maecenas tincidunt, 
+              | augue et rutrum condimentum, libero lectus mattis orci, ut commodo.
+              | Ut eleifend libero sed neque rhoncus consequat. Maecenas tincidunt, 
+              | augue et rutrum condimentum, libero lectus mattis orci, ut commodo.
+              | Ut eleifend libero sed neque rhoncus consequat. Maecenas tincidunt, 
+              | augue et rutrum condimentum, libero lectus mattis orci, ut commodo. 
+              | Ut eleifend libero sed neque rhoncus consequat. Maecenas tincidunt, 
+              | augue et rutrum condimentum, libero lectus mattis orci, ut commodo. 
+              | Ut eleifend libero sed neque rhoncus consequat. Maecenas tincidunt, 
+              | augue et rutrum condimentum, libero lectus mattis orci, ut commodo libero lectus mattis orci.
+            p Ut eleifend libero sed neque rhoncus consequat. Maecenas tincidunt, 
+              | augue et rutrum condimentum, libero lectus libero lectus mattis orci mattis orci, ut commodo.
+            h1 Caption H1
+            h2 Caption H2
+            h3 Caption H3
+            ul
+              li paragraph1
+              li paragraph2
+              li paragraph3
+            ol
+              li: a(href="#") paragraph4
+              li paragraph5
+              li paragraph6
+            a(href="#") Regular link
+            a.active(href="#") Active link
+            a.hover(href="#") Hover link
+        .services__btn.open View more
+        .services__btn.close Close
+    .product
+      .product__block
+        a.product__link(href="#")
+          .product__img
+            img(src="data/product/product_img1.png" width="52" height="57")
+          .product__img--hover
+            img(src="data/product/product_img1_h.png" width="52" height="57")
+          .product__title Suspendisse
+        .product__text
+          p Quisque id tellus quis risus vehicula vehicula ut turpis. In eros nulla, placerat vitae at, vehicula ut nunc.
+        a.product__btn(href="#") Read more
+      .product__block
+        a.product__link(href="#")
+          .product__img
+            img(src="data/product/product_img2.png" width="57" height="55")
+          .product__img--hover
+            img(src="data/product/product_img2_h.png" width="57" height="55")
+          .product__title Maecenas
+        .product__text
+          p Ut eleifend libero sed neque rhoncus consequat. Maecenas tincidunt, augue et rutrum condimentum, libero lectus mattis orci, ut commodo.
+        a.product__btn(href="#") Read more
+      .product__block
+        a.product__link(href="#")
+          .product__img
+            img(src="data/product/product_img3.png" width="58" height="53")
+          .product__img--hover
+            img(src="data/product/product_img3_h.png" width="58" height="53")
+          .product__title Aliquam
+        .product__text
+          p Vivamus eget ante bibendum arcu vehicula ultricies. Integer venenatis mattis nisl, vitae pulvinar dui tempor non. 
+        a.product__btn(href="#") Read more
+      .product__block
+        a.product__link(href="#")
+          .product__img
+            img(src="data/product/product_img4.png" width="50" height="52")
+          .product__img--hover
+            img(src="data/product/product_img4_h.png" width="50" height="52")
+          .product__title Habitasse
+        .product__text
+          p Astehicula ultricies. Integer venenatis mattis nisl, vitae pulvinar dui tempor non. 
+        a.product__btn(href="#") Read more
+    .big-slider
+      .big-slider__title Why modus versus?
+      .big-slider__subtitle Capacitance cascading integer reflective interface data development high bus cache dithering transponder.
+      .big-slider__box
+        .big-slider__slide
+          a.big-slider__link(href="#")
+            img(src="data/big-slider/slide1.png" title="img" alt="img")
+            .big-slider__img-title Your image
+        .big-slider__slide
+          a.big-slider__link(href="#")
+            img(src="data/big-slider/slide1.png" title="img" alt="img")
+            .big-slider__img-title Your image
+        .big-slider__slide
+          a.big-slider__link(href="#")
+            img(src="data/big-slider/slide1.png" title="img" alt="img")
+            .big-slider__img-title Your image
+        .big-slider__slide
+          a.big-slider__link(href="#")
+            img(src="data/big-slider/slide1.png" title="img" alt="img")
+            .big-slider__img-title Your image
+    .information
+      .information__holder
+        .information__box
+          .information__text
+            .information__title-list Why chose us?
+            ul.information__list
+              li Quisque at massa ipsum
+              li Maecenas a lorem augue, egestas 
+              li Cras vitae felis at lacus eleifend 
+              li Etiam auctor diam pellentesque 
+              li Nulla ac massa at dolor 
+              li Condimentum eleifend vitae vitae  
+        .information__box
+          .information__text
+            p Curabitur quis nisl in leo euismod venenatis eu in diam. Etiam auctor diam 
+              | pellentesque lectus 
+              a(href="#") vehicula mattis
+              | . Nulla ac massa at dolor condimentum eleifend vitae vitae urna.
+          .indicators
+            .indicators__box
+              .indicators__counter-bg(style="background-image:url(../data/indicators/indicators50.png)")
+                .indicators__counter 50
+              .indicators__title Suspendisse
+            .indicators__box
+              .indicators__counter-bg(style="background-image:url(../data/indicators/indicators70.png)")
+                .indicators__counter 70
+              .indicators__title Maecenas
+            .indicators__box
+              .indicators__counter-bg(style="background-image:url(../data/indicators/indicators80.png)")
+                .indicators__counter 80
+              .indicators__title Aliquam
+            .indicators__box
+              .indicators__counter-bg(style="background-image:url(../data/indicators/indicators100.png)")
+                .indicators__counter 100
+              .indicators__title Habitasse
+        .information__box
+          .information__text
+            .information__title-list What client's say?
+            .information__review
+              p 
+                em Curabitur quis nisl in leo euismod venenatis eu in diam. 
+                  | Etiam auctor diam pellentesque lectus vehicula mattis. 
+                | Nulla ac massa at dolor condimentum
+            .information__review-name Jhon Doe
+    .slider-bottom
+      .slider-bottom__title 
+        span Our happy Clients
+      .slider-bottom__box
+        .slider-bottom__slide
+          a.slider-bottom__link(href="#")
+            img.slider-bottom__img
+        .slider-bottom__slide
+          a.slider-bottom__link(href="#")
+            img.slider-bottom__img
+        .slider-bottom__slide
+          a.slider-bottom__link(href="#")
+            img.slider-bottom__img
+        .slider-bottom__slide
+          a.slider-bottom__link(href="#")
+            img.slider-bottom__img
+        .slider-bottom__slide
+          a.slider-bottom__link(href="#")
+            img.slider-bottom__img
+        .slider-bottom__slide
+          a.slider-bottom__link(href="#")
+            img.slider-bottom__img
+        .slider-bottom__slide
+          a.slider-bottom__link(href="#")
+            img.slider-bottom__img

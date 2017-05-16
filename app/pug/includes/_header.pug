@@ -1,0 +1,39 @@
+header.header
+  .header__holder
+    strong.header__logo
+      a(href="/")
+    nav.menu
+      ul.menu__list
+        li.menu__item.active
+          a(href="/").menu__link Home
+        li.menu__item
+          a(href="/").menu__link About
+        li.menu__item.parent
+          a(href="/").menu__link Services
+            em.menu__arrow
+          ul.menu__insert
+            li.menu__item: a(href="/").menu__link Portfolio 2 column page
+            li.menu__item: a(href="/").menu__link Portfolio 2 column page
+            li.menu__item: a(href="/").menu__link Portfolio 2 column page
+        li.menu__item.parent
+          a(href="/").menu__link Portfolio
+            em.menu__arrow
+          ul.menu__insert
+            li.menu__item: a(href="/").menu__link Portfolio 2 column page
+            li.menu__item: a(href="/").menu__link Portfolio 2 column page
+            li.menu__item: a(href="/").menu__link Portfolio 2 column page
+        li.menu__item: a(href="/").menu__link Blog
+        li.menu__item: a(href="/").menu__link Features
+        li.menu__item: a(href="/").menu__link Contacts
+      .hamburger#hamburger
+        .hamburger__holder
+          span.hamburger__line
+          span.hamburger__line
+          span.hamburger__line
+      .header__search-block
+        .header__search-open
+        form.search(action="#" method="post")
+          input.search__field(type="text" name="search" placeholder="Search")
+          button.search__btn(type="submit") Ок
+        
+            

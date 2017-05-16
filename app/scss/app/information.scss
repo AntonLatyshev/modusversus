@@ -1,0 +1,127 @@
+.information {
+  max-width: 1170px;
+  margin: 0 auto 50px;
+  &__holder {
+    @extend %clearfix;
+    @include response(1186) {
+      text-align: center;
+    }
+  }
+  &__box {
+    float: left;
+    max-width: 300px;
+    width: 100%;
+    @include response(1186) {
+      float: none;
+      display: inline-block;
+      vertical-align: top;
+      margin: 0 0 50px;
+    }
+    @include response(891) {
+      max-width: 100%;
+    }
+  }
+  &__box:nth-child(2) {
+    max-width: 570px;
+    .information__text {
+      margin: 0 0 50px;
+      @include response(891) {
+        text-align: center;
+      }
+    }
+    @include response(891) {
+      max-width: 100%;
+    }
+  }
+  &__box:nth-child(3) {
+    @include response(1186) {
+      max-width: 500px;
+      .information__title-list {
+        text-align: center;
+      }
+    }
+    @include response(891) {
+      max-width: 100%;
+    }
+  }
+  &__text {
+    padding: 0 15px;
+    text-align: justify;
+    font-size: 13px;
+    line-height: 24px;
+    color: #777;
+    @include response(891) {
+      display: inline-block;
+    }
+    a {
+      color: $red;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    p {
+      margin: 0;
+    }
+  }
+  &__title-list {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 900;
+    color: #7f8c8c;
+    text-transform: capitalize;
+    margin: 0 0 35px;
+    @include response(891) {
+      text-align: center;
+    }
+  }
+  &__list {
+    @extend %clear-list;
+    li {
+      font-size: 13px;
+      line-height: 16px;
+      color: #777;
+      padding: 0 0 0 20px;
+      margin: 0 0 10px;
+      position: relative;
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        margin: -6px 0 0;
+        @extend %icon-list-arrow;
+      }
+    }
+  }
+  &__review {
+    text-align: left;
+    max-width: 250px;
+    width: 100%;
+    background-color: #fff;
+    font-size: 12px;
+    line-height: 24px;
+    color: #777;
+    padding: 20px 10px;
+    border-radius: 7px;
+    margin: 0 0 10px 20px;
+    @include response(1186) {
+      max-width: 100%;
+      margin: 0 0 20px;
+      text-align: center;
+    }
+    p {
+      margin: 0;
+    }
+  }
+  &__review-name {
+    font-size: 16px;
+    font-weight: 700;
+    color: #777;
+    margin: 0 0 0 50px;
+    @include response(1186) {
+      text-align: center;
+      margin: 0;
+    }
+  }
+}

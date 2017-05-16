@@ -1,0 +1,45 @@
+.hamburger {
+  display: none;
+  cursor: pointer;
+  float: right;
+  width: 50px;
+  height: 100%;
+  line-height: 75px;
+  @include response(1024) {
+    display: block;
+  }
+  @include response(536) {
+    display: inline-block;
+    line-height: 31px;
+    height: 31px;
+  }
+  &__holder {
+    height: 31px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  &__line {
+    width: 50px;
+    height: 5px;
+    background-color: $blue_h;
+    display: block;
+    transition: all 0.3s ease-in-out;
+  }
+  &__line + &__line {
+    margin: 8px 0 0;
+  }
+  &.active {
+    .hamburger__line {
+      background-color: $red;
+    }
+    .hamburger__line:nth-child(2){
+      opacity: 0;
+    }
+    .hamburger__line:nth-child(1){
+      transform: translateY(13px) rotate(45deg);
+    }
+    .hamburger__line:nth-child(3){
+      transform: translateY(-13px) rotate(-45deg);
+    }
+  }
+}

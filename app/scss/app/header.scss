@@ -1,0 +1,257 @@
+.header {
+  background-color: $blue;
+  background-image: url(../data/header-bottom.png);
+  background-repeat: repeat-x;
+  background-position: bottom;
+  height: 80px;
+  font-family: 'Open Sans', sans-serif;
+  @include response(1180) {
+    padding: 0 15px;
+    position: relative;
+  }
+  @include response(536) {
+    height: 100px;
+  }
+  &__holder {
+    max-width: 1170px;
+    margin: 0 auto;
+    height: 100%;
+    @extend %clearfix;
+    @include response(536) {
+      text-align: center;
+    }
+    @include response(536) {
+      max-width: 320px;
+    }
+  }
+  &__logo {
+    float: left;
+    display: block;
+    width: 192px;
+    height: 100%;
+    @include response(536) {
+      float: none;
+      display:block;
+      width: 100%;
+      height: 50px;
+      text-align: center;
+    }
+    a {
+      display: block;
+      height: 100%;
+      background: url(../images/header_logo.png) no-repeat;
+      background-size: 192px 21px;
+      background-position: center;
+    }
+  }
+  .menu {
+    float: right;
+    position: relative;
+    height: 100%;
+    @include response(536) {
+      float: none;
+      width: 100%;
+      height: 50px;
+      text-align: center;
+    }
+    &__list {
+      float: left;
+      @extend %clear-list;
+      @extend %clearfix;
+      padding: 23px 0 0;
+      margin: 0 40px 0 0;
+      @include response(1024) {
+        display: none;
+      }
+    }
+    &__item {
+      float: left;
+      border-radius: 7px;
+      position: relative;
+      transition: .3s;
+      &.active {
+        background-color: $blue_h;
+        box-shadow: 0px 3px 0px 0px rgba(82,139,134,1);
+      }
+      &.parent {
+        &::after {
+          content: "";
+          position: absolute;
+          display: block;
+          width: 100%;
+          height: 20px;
+          cursor: pointer;
+        }
+        .menu__link {
+          padding: 10px 15px 10px 25px;
+          position: relative;
+          em {
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            margin: -4px 0 0;
+            display: none;
+            width: 5px;
+            height: 5px;
+            border: solid #fff;
+            border-width: 0 0 1px 1px;
+            transform: rotate(-45deg);
+          }
+        }
+      }
+      &:hover {
+        background-color: $red;
+        box-shadow: 0px 3px 0px 0px rgba(226,83,75,1);
+        .menu__link em {
+          display: block;
+        }
+        .menu__insert {
+          display: block;
+        }
+      }
+    }
+    &__item + .menu__item {
+      margin: 0 0 0 10px;
+    }
+    &__link {
+      display: block;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #fff;
+      padding: 10px 15px;
+      font-size: 13px;
+      line-height: 13px;
+      font-weight: 600;
+    }
+    &__insert {
+      display: none;
+      position: absolute;
+      z-index: 2;
+      top: 45px;
+      left: 0;
+      border: 5px solid $red_h;
+      @extend %clear-list;
+      background-color: $red;
+      border-radius: 7px;
+      width: 200px;
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: -9px;
+        left: 5px;
+        width: 0;
+      	height: 0;
+      	border-left: 5px solid transparent;
+      	border-right: 5px solid transparent;
+      	border-bottom: 5px solid $red_h;
+      }
+      .menu__item {
+        width: 100%;
+        border-radius: 3px;
+        margin: 0;
+        &:nth-child(1n+2) {
+          border-top: 2.5px solid $red_h;
+        }
+        &:nth-child(-n+2) {
+          border-bottom: 2.5px solid $red_h;
+        }
+        &:hover {
+          background: $blue;
+          box-shadow: none;
+        }
+        .menu__link {
+          text-transform: inherit;
+          padding: 10px 15px;
+        }
+      }
+    }
+  }
+  &__search-block {
+    float: right;
+    position: relative;
+    @include response(1024) {
+      margin: 23px 15px 0 0;
+    }
+    @include response(536) {
+      display: inline-block;
+      margin: 0 15px 0 0;
+      float: left;
+    }
+    .search {
+      display: none;
+      position: absolute;
+      bottom: 5px;
+      right: 0;
+      @include response(1024) {
+        display: block;
+        position: inherit;
+        bottom: auto;
+      }
+      &__field {
+        outline: none;
+        border: 3px solid $blue_h;
+        border-radius: 10px;
+        padding: 0 40px 0 10px;
+        min-width: 100px;
+        height: 26px;
+        @include response(1024) {
+          height: 31px;
+        }
+        @include response(337) {
+          min-width: auto;
+          width: 200px;
+        }
+        &:focus {
+          border-color: $red;
+        }
+      }
+      &__btn {
+        outline: none;
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        right: 5px;
+        padding: 0;
+        margin: -8px 0 0;
+        width: 32px;
+        height: 16px;
+        border-radius: 5px;
+        background: $blue;
+        border: none;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 10px;
+        font-weight: 600;
+        transition: .3s;
+        &:hover {
+          background: $red;
+        }
+      }
+    }
+  }
+  &__search-open {
+    cursor: pointer;
+    display: block;
+    width: 30px;
+    height: 80px;
+    position: relative;
+    @include response(1024) {
+      display: none;
+    }
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin: -8px 0 0 -8px;
+      @extend %icon-search_icon;
+    }
+    &:hover {
+      &::after {
+        @extend %icon-search_icon_h;
+      }
+    }
+  }
+}

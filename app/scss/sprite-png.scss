@@ -1,0 +1,174 @@
+
+%icon-facebook_icon {
+  background-image: url(../images/sprite.png);
+  background-position: -133px -27px;
+  width: 10px;
+  height: 22px;
+}
+%icon-facebook_icon_h {
+  background-image: url(../images/sprite.png);
+  background-position: -133px 0px;
+  width: 10px;
+  height: 22px;
+}
+%icon-footer-list-arrow {
+  background-image: url(../images/sprite.png);
+  background-position: -133px -71px;
+  width: 6px;
+  height: 9px;
+}
+%icon-footer-review-img_bg {
+  background-image: url(../images/sprite.png);
+  background-position: 0px -28px;
+  width: 33px;
+  height: 27px;
+}
+%icon-google_icon {
+  background-image: url(../images/sprite.png);
+  background-position: 0px -60px;
+  width: 22px;
+  height: 23px;
+}
+%icon-google_icon_h {
+  background-image: url(../images/sprite.png);
+  background-position: -27px -60px;
+  width: 22px;
+  height: 23px;
+}
+%icon-list-arrow {
+  background-image: url(../images/sprite.png);
+  background-position: -133px -54px;
+  width: 10px;
+  height: 12px;
+}
+%icon-main-carousel-arrow {
+  background-image: url(../images/sprite.png);
+  background-position: -38px -28px;
+  width: 23px;
+  height: 23px;
+}
+%icon-mobile-menu-arrow {
+  background-image: url(../images/sprite.png);
+  background-position: -66px -28px;
+  width: 28px;
+  height: 18px;
+}
+%icon-rss_icon {
+  background-image: url(../images/sprite.png);
+  background-position: -106px 0px;
+  width: 22px;
+  height: 21px;
+}
+%icon-rss_icon_h {
+  background-image: url(../images/sprite.png);
+  background-position: -54px -60px;
+  width: 22px;
+  height: 21px;
+}
+%icon-search_icon {
+  background-image: url(../images/sprite.png);
+  background-position: -81px -60px;
+  width: 16px;
+  height: 16px;
+}
+%icon-search_icon_h {
+  background-image: url(../images/sprite.png);
+  background-position: 0px -88px;
+  width: 16px;
+  height: 16px;
+}
+%icon-slider-bottom-arrow {
+  background-image: url(../images/sprite.png);
+  background-position: 0px -109px;
+  width: 12px;
+  height: 18px;
+}
+%icon-slider-bottom-bg {
+  background-image: url(../images/sprite.png);
+  background-position: 0px 0px;
+  width: 101px;
+  height: 23px;
+}
+%icon-twitter_icon {
+  background-image: url(../images/sprite.png);
+  background-position: -106px -26px;
+  width: 17px;
+  height: 22px;
+}
+%icon-twitter_icon_h {
+  background-image: url(../images/sprite.png);
+  background-position: -106px -53px;
+  width: 17px;
+  height: 22px;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  %icon-facebook_icon {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 143px 127px;
+  }
+  %icon-facebook_icon_h {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 143px 127px;
+  }
+  %icon-footer-list-arrow {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 143px 127px;
+  }
+  %icon-footer-review-img_bg {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 143px 127px;
+  }
+  %icon-google_icon {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 143px 127px;
+  }
+  %icon-google_icon_h {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 143px 127px;
+  }
+  %icon-list-arrow {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 143px 127px;
+  }
+  %icon-main-carousel-arrow {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 143px 127px;
+  }
+  %icon-mobile-menu-arrow {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 143px 127px;
+  }
+  %icon-rss_icon {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 143px 127px;
+  }
+  %icon-rss_icon_h {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 143px 127px;
+  }
+  %icon-search_icon {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 143px 127px;
+  }
+  %icon-search_icon_h {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 143px 127px;
+  }
+  %icon-slider-bottom-arrow {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 143px 127px;
+  }
+  %icon-slider-bottom-bg {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 143px 127px;
+  }
+  %icon-twitter_icon {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 143px 127px;
+  }
+  %icon-twitter_icon_h {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 143px 127px;
+  }
+}

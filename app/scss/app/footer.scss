@@ -1,0 +1,319 @@
+.footer {
+  &__top {
+    background-color: $blue;
+    background-image: url(../data/footer-top.png);
+    background-repeat: repeat-x;
+    background-position: top;
+    padding: 50px 0;
+  }
+  &__holder {
+    max-width: 1170px;
+    margin: 0 auto;
+    @extend %clearfix;
+    @include response (1200) {
+      padding: 0 15px;
+      text-align: center;
+    }
+  }
+  &__block {
+    float: left;
+    max-width: 370px;
+    width: 100%;
+    @extend %clearfix;
+    @include response (1200) {
+      float: none;
+      display: inline-block;
+      margin: 0 0 30px;
+      vertical-align: top;
+    }
+    @include response (821) {
+      max-width: 100%;
+      text-align: center;
+    }
+  }
+  &__block + &__block {
+    margin: 0 0 0 30px;
+    @include response (1200) {
+      margin: 0 0 30px 30px;
+      & + .footer__block {
+        margin: 0;
+      }
+    }
+    @include response (1200) {
+      margin: 0 0 30px;
+      & + .footer__block {
+        margin: 0;
+      }
+    }
+  }
+  &__logo {
+    display: block;
+    width: 192px;
+    height: 21px;
+    margin: 0 0 30px;
+    @include response (821) {
+      margin: 0 auto 30px;
+    }
+    a {
+      display: block;
+      height: 100%;
+      background-image: url(../images/header_logo.png);
+      background-position: center;
+      background-size: 192px 21px;
+    }
+  }
+  &__text {
+    height: 66px;
+    text-align: left;
+    overflow: hidden;
+    font-size: 13px;
+    line-height: 24px;
+    color: #fff;
+    margin: 0 0 30px;
+    @include response (821) {
+      text-align: center;
+      margin: 0 0 10px;
+    }
+    p {
+      margin: 0;
+    }
+  }
+  &__link {
+    text-align: left;
+    font-size: 13px;
+    line-height: 24px;
+    color: #fff;
+    margin: 0 0 10px;
+    @include response (821) {
+      text-align: center;
+    }
+    a {
+      display: inline-block;
+      text-decoration: none;
+      color: #fff;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 24px;
+      font-style: italic;
+      transition: .3s;
+      &:hover {
+        color: $blue_h;
+      }
+    }
+  }
+  &__link + &__link {
+    margin: 0;
+  }
+  &__list-box {
+    float: left;
+    @include response (1200) {
+      float: none;
+      display: inline-block;
+      vertical-align: top;
+    }
+  }
+  &__list-box + &__list-box {
+    margin: 0 0 0 80px;
+    @include response (367) {
+      margin: 0 0 0 30px;
+    }
+  }
+  &__box-title {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 800;
+    color: #000;
+    opacity: 0.4;
+    margin: 0 0 40px
+  }
+  &__list {
+    @extend %clear-list;
+    padding: 0 0 0 20px;
+    li {
+      padding: 0 0 0 20px;
+      position: relative;
+      margin: 0 0 10px;
+      text-align: left;
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 5px;
+        top: 50%;
+        margin: -4px 0 0 -3px;
+        @extend %icon-footer-list-arrow;
+      }
+      a {
+        font-size: 13px;
+        display: block;
+        text-decoration: none;
+        color: #fff;
+        transition: .3s;
+        &:hover {
+          color: $blue_h;
+        }
+      }
+    }
+  }
+  &__title {
+    font-size: 20px;
+    line-height: 24px;
+    color: #fff;
+    font-style: italic;
+    text-transform: lowercase;
+    margin: 0 0 20px;
+    a {
+      display: inline-block;
+      font-style: normal;
+      font-weight: 900;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #fff;
+      transition: .3s;
+      &:hover {
+        color: $blue_h;
+      }
+    }
+  }
+  &__list-review {
+    @extend %clear-list;
+    @include response (821) {
+      text-align: center;
+    }
+  }
+  &__review {
+    @extend %clearfix;
+    margin: 0 0 20px;
+    @include response (821) {
+      display: inline-block;
+    }
+  }
+    &__review + &__review {
+      margin: 0;
+    }
+  &__review-img {
+    float: left;
+    width: 70px;
+    height: 70px;
+    border-radius: 5px;
+    margin: 0 20px 0 0;
+    background-color: rgba(0,0,0,0.3);
+    position: relative;
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      @extend %icon-footer-review-img_bg;
+      top: 50%;
+      left: 50%;
+      margin: -14px 0 0 -16px;
+    }
+  }
+  &__review-textbox {
+    overflow: hidden;
+  }
+  &__review-text {
+    text-align: left;
+    color: #fff;
+    font-size: 13px;
+    line-height: 20px;
+    height: 35px;
+    overflow: hidden;
+    margin: 0 0 5px;
+    opacity: 0.7;
+  }
+  &__review-date {
+    text-align: left;
+    color: #000;
+    font-size: 13px;
+    line-height: 20px;
+    opacity: 0.7;
+  }
+  &__bottom {
+    background-color: #67b3ac;
+    height: 50px;
+    line-height: 50px;
+  }
+  &__copyright {
+    display: inline-block;
+    float: left;
+    vertical-align: middle;
+    font-size: 13px;
+    color: #fff;
+    a {
+      display: inline-block;
+      height: 100%;
+      color: #fff;
+      text-decoration: none;
+      font-size: 13px;
+      transition: .3s;
+      &:hover {
+        color: $red_h;
+      }
+    }
+  }
+  &__social {
+    float: right;
+    display: inline-block;
+    vertical-align: middle;
+    @extend %clear-list;
+    @extend %clearfix;
+    li {
+      float: left;
+      width: 50px;
+      text-align: center;
+      @include response (359) {
+        width: 30px;
+      }
+      a {
+        display: block;
+        span {
+          display: inline-block;
+          vertical-align: middle;
+        }
+      }
+      &:hover {
+        .footer__facebook {
+          span {
+            @extend %icon-facebook_icon_h;
+          }
+        }
+        .footer__google {
+          span {
+            @extend %icon-google_icon_h;
+          }
+        }
+        .footer__twitter {
+          span {
+            @extend %icon-twitter_icon_h;
+          }
+        }
+        .footer__rss {
+          span {
+            @extend %icon-rss_icon_h;
+          }
+        }
+      }
+    }
+  }
+  &__facebook {
+    span {
+      @extend %icon-facebook_icon;
+    }
+  }
+  &__google {
+    span {
+      @extend %icon-google_icon;
+    }
+  }
+  &__twitter {
+    span {
+      @extend %icon-twitter_icon;
+    }
+  }
+  &__rss {
+    span {
+      @extend %icon-rss_icon;
+    }
+  }
+}
